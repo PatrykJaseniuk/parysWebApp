@@ -40,14 +40,14 @@ export const data: Site = {
         ]
     },
     Uslugi: {
-        background: '/gymBlur.jpg',
+        background: 'gymBlur.jpg',
         title: 'Uslugi',
         zawartosc: {
             uslugi: [
                 {
                     title: 'Siłownia',
                     description: '5 stref do ćwiczeń: CARDIO-> bieżnie, orbitreki, stepy, wioślarze, narciarz, rowerki poziome i pionowe; SIŁOWA , WOLNE CIĘŻARY , CROSSFIT , STRECHING',
-                    videoSrc: '/Silownia.mp4',
+                    videoSrc: 'Silownia.mp4',
                     cennik: [
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
@@ -58,7 +58,7 @@ export const data: Site = {
                 {
                     title: 'Badminton',
                     description: ' Sala do gry w badmintona',
-                    videoSrc: '/SilowniaLowRes.mp4',
+                    videoSrc: 'SilowniaLowRes.mp4',
                     cennik: [
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
