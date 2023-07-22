@@ -10,7 +10,7 @@
         "next-env.d.ts": true,
         "next.config.js": false,
         "package-lock.json": true,
-        "package.json": true,
+        "package.json": false,
         "README.md": true,
         "tsconfig.json": true,
         "node_modules": true,
