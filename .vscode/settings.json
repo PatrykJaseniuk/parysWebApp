@@ -10,7 +10,7 @@
         "next-env.d.ts": true,
         "next.config.js": true,
         "package-lock.json": true,
-        "package.json": false,
+        "package.json": true,
         "README.md": true,
         "tsconfig.json": true,
         "node_modules": true,
@@ -19,5 +19,8 @@
         "postcss.config.js": true,
         "tailwind.config.js": true
     },
-    "explorerExclude.backup": {}
+    "explorerExclude.backup": {},
+    "cSpell.enableFiletypes": [
+        "typescript"
+    ]
 }

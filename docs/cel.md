@@ -9,3 +9,8 @@ Strona reklamowa siłowni Parys
 * Partnerzy
 * Galeria
 * Kontakt
+
+## Realizacja
+
+Korzystam z [Chakra UI](https://chakra-ui.com/), [Next.js](https://nextjs.org/) i [React.js](https://reactjs.org/).
+
