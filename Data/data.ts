@@ -40,14 +40,14 @@ export const data: Site = {
         ]
     },
     Uslugi: {
-        background: 'gymBlur.jpg',
+        background: 'SilowniaBackground.png',
         title: 'Uslugi',
         zawartosc: {
             uslugi: [
                 {
                     title: 'Siłownia',
                     description: '5 stref do ćwiczeń: CARDIO-> bieżnie, orbitreki, stepy, wioślarze, narciarz, rowerki poziome i pionowe; SIŁOWA , WOLNE CIĘŻARY , CROSSFIT , STRECHING',
-                    videoSrc: 'Silownia.mp4',
+                    videoSrc: 'silownia.mp4',
                     cennik: [
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
@@ -58,7 +58,7 @@ export const data: Site = {
                 {
                     title: 'Badminton',
                     description: ' Sala do gry w badmintona',
-                    videoSrc: 'SilowniaLowRes.mp4',
+                    videoSrc: 'crossfit.mp4',
                     cennik: [
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
@@ -69,7 +69,7 @@ export const data: Site = {
                 {
                     title: 'Sala do walki',
                     description: ' Sala do gry w badmintona',
-                    videoSrc: '/SilowniaLowRes.mp4',
+                    videoSrc: 'crossfit.mp4',
                     cennik: [
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
@@ -80,7 +80,7 @@ export const data: Site = {
                 {
                     title: 'Sauna',
                     description: 'Sauna sucha',
-                    videoSrc: '/SilowniaLowRes.mp4',
+                    videoSrc: 'sauna.mp4',
                     cennik: [
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
@@ -91,7 +91,7 @@ export const data: Site = {
                 {
                     title: 'Masaż',
                     description: 'Posiadamy bogatą ofertę masaży',
-                    videoSrc: '/SilowniaLowRes.mp4',
+                    videoSrc: 'masaz.mp4',
                     cennik: [
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
@@ -102,7 +102,7 @@ export const data: Site = {
                 {
                     title: 'Bufet i sklep z odżywkami',
                     description: ' Sala do gry w badmintona',
-                    videoSrc: '/SilowniaLowRes.mp4',
+                    videoSrc: 'bufet.mp4',
                     cennik: [
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
                         { nazwa: ' miesięczny', cena: '100zł', wlasciwosci: [{ icon: IconVerifed, text: 'Dostęp do siłowni' }] },
@@ -115,7 +115,7 @@ export const data: Site = {
         },
     },
     zajeciaIndywidualne: {
-        background: 'https://images.unsplash.com/photo-1611095772763-4b0b2b1b0b0b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXR5JTIwY2FyZSUyMGNpdHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80',
+        background: 'badmintonBlur.png',
         title: 'Zajęcia indywidualne',
         zawartosc: {
             description: 'Zajęcia indywidualne pod okiem specjalisty to najszybszy sposób na osiągnięcie ustalonego celu. Niezależnie czy zależy Ci na poprawie kondycji, sylwetki czy zdrowia, nasi Ci to znacznie ułatwią. Zajęcia trwają godzinę i wymagają wcześniejszej rezerwacji.',
@@ -150,7 +150,7 @@ export const data: Site = {
 
     },
     zajeciaGrupowe: {
-        background: '/gymBlur.jpg',
+        background: 'goraBlur.png',
         title: 'Zajęcia grupowe',
         zawartosc: {
             description: 'Treningi grupowe pod okiem specjalisty',
@@ -158,13 +158,13 @@ export const data: Site = {
                 {
                     title: 'Crossfit',
                     description: 'Zajęcia z wolnymi ciazarami oraz własnym ciężarem ciała. Jest to świetne rozwiązanie dla osób, które chcą poprawić swoją kondycję oraz wygląd. Zajęcia z wolnymi ciazarami oraz własnym ciężarem ciała. Jest to świetne rozwiązanie dla osób, które chcą poprawić swoją kondycję oraz wygląd. Zajęcia z wolnymi ciazarami oraz własnym ciężarem ciała. Jest to świetne rozwiązanie dla osób, które chcą poprawić swoją kondycję oraz wygląd.',
-                    imgSrc: 'https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png',
+                    imgSrc: 'crossfit.png',
                 },
-                {
-                    title: 'Fitness',
-                    description: 'Zajęcia Fitness dla kobiet i nie tylko',
-                    imgSrc: 'https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png',
-                },
+                // {
+                //     title: 'Fitness',
+                //     description: 'Zajęcia Fitness dla kobiet i nie tylko',
+                //     imgSrc: 'https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png',
+                // },
             ]
         }
     },
