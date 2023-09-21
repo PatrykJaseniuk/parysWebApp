@@ -1,8 +1,4 @@
 "use client";
-
-import { Team } from '../components/Testowe/ZajeciaIndywidualne'
-import Head from 'next/head'
-import Image from 'next/image'
 // import { Silownia } from '@/components/Sections/Uslugi/Silownia';
 // import Cards from '@/components/Card/Card';
 import { ChakraProvider } from '@chakra-ui/react';

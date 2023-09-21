@@ -1,6 +1,5 @@
 import { Text, Heading, Slide, useBreakpointValue, Button } from "@chakra-ui/react"
 import { useScrollTrigger } from "@mui/material"
-import App from "next/app"
 
 import { use, useState } from "react"
 
@@ -18,11 +17,15 @@ export const AppBar = ({ elements }: { elements: string[] }) => {
     });
 
     return (
-        <div style={{ position: 'sticky', top: '0', zIndex: 100 }}>
-            <Slide direction='top' in={!isGoingDown} >
-                {version}
-            </Slide>
-        </div>
+        <>
+            <div style={{ height: '5rem', background: 'black' }} />
+            <div style={{ position: 'fixed', zIndex: 100 }}>
+                <Slide direction='top' in={!isGoingDown} >
+                    {version}
+                </Slide>
+            </div>
+        </>
+
     )
 }
 
@@ -48,7 +51,7 @@ const AppBarSmall = ({ elements }: { elements: string[] }) => {
                 }}
             >
                 <Button onClick={() => setIsMenuOpen(prev => !prev)} >Menu</Button>
-                <Heading size='lg' >Logo</Heading>
+                <img style={{ height: '3rem' }} src="logo.png" ></img>
                 <Text>Logowanie</Text>
 
             </div>
@@ -90,7 +93,7 @@ const AppBarBig = ({ elements }: { elements: string[] }) => {
                 paddingLeft: '1rem',
                 paddingRight: '1rem',
             }}>
-            <Heading size='lg' >Logo</Heading>
+            <img style={{ height: '3rem' }} src="logo.png" ></img>
             <div
                 style={{
                     height: '5rem',

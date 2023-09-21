@@ -1,6 +1,12 @@
+
 import { CenaDane } from "@/Data/Interface";
 import { Heading, List, ListItem, Text } from "@chakra-ui/react";
+import Flicking from "@egjs/react-flicking";
+import "@egjs/react-flicking/dist/flicking.css";
+import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+
 
 export interface SwiperCardProps {
     data: CenaDane
@@ -9,18 +15,14 @@ export interface SwiperCardProps {
 
 export function Cards({ cards }: { cards?: SwiperCardProps[] }) {
     return (
-        <Swiper
-            slidesPerView={'auto'}
-            spaceBetween={30}
-            centeredSlides={true}
-            // effect={'cards'}
-            grabCursor={true}
-            // modules={[EffectCards]}
-            className="mySwiper"
-            style={{ width: '90vW', height: '20rem' }}
-        >
-            {cards?.map(card => SwiperCard(card))}
-        </Swiper>
+        <div
+            style={{ width: '90vw' }}>
+            <Flicking
+                bound={true}
+            >
+                {cards?.map(card => Card(card))}
+            </Flicking>
+        </div>
     )
 }
 
@@ -56,37 +58,40 @@ export const colorsPackages = [
     packageGenerator(320),
 ]
 
-function SwiperCard({ data, colorPackage }: SwiperCardProps) {
+const Card = ({ data, colorPackage }: SwiperCardProps) => {
+
     return (
-        <SwiperSlide
+        <div
             style={{
                 width: '16rem',
+                height: '24rem',
+                margin: '1rem',
                 display: 'flex',
                 justifyContent: 'space-around',
                 alignItems: 'center',
                 flexFlow: 'column',
                 borderRadius: '18px',
                 background: colorPackage.background,
-            }}
-        >
-            <Heading size='xl' color={colorPackage.font}  >{data.nazwa}</Heading>
-            <Heading size='2xl' color={colorPackage.font} > {data.cena} zł</Heading>
+            }}>
+            {data.imgSrc && <img src={data.imgSrc} style={{ borderRadius: '10%', width: '70%', height: 'auto' }} />}
+            <Heading size='lg' color={colorPackage.font}  >{data.nazwa}</Heading>
+            {data.cena && <Heading size='2xl' color={colorPackage.font} > {data.cena} zł</Heading>}
             {/* line */}
             <div style={{ width: '80%', height: '1px', backgroundColor: colorPackage.font }}></div>
             {/* lista funkcji */}
-            <div style={{ textAlign: 'start' }}>
-                <List spacing={1}>
+            <div style={{ textAlign: 'start', width: '90%' }}>
+                <List style={{}} spacing={1}>
                     {data.wlasciwosci.map((wlasciwosc, index) =>
-                        <ListItem key={index} style={{ display: 'flex', gap: '1rem', alignItems: 'end' }}>
-                            {wlasciwosc.icon({ style: { width: '2rem', fill: colorPackage.font } })}
+                        <ListItem key={index} style={{ display: 'flex', gap: '1rem', alignItems: 'center', justifyContent: 'start' }}>
+                            <div style={{ width: '2rem' }}>
+                                {wlasciwosc.icon({ style: { width: '2rem', fill: colorPackage.font } })}
+                            </div>
                             <Text color={colorPackage.font} >{wlasciwosc.text}</Text>
                             {/* {wlasciwosc} */}
                         </ListItem>
                     )}
                 </List>
             </div>
-
-            {/* <Card /> */}
-        </SwiperSlide >
+        </div>
     )
 }

@@ -1,6 +1,4 @@
 import { Heading, IconButton, useBreakpointValue } from "@chakra-ui/react";
-import { AppBar, Toolbar } from "@mui/material";
-import { use } from "react";
 
 export function UnderSection({ children }: { children?: React.ReactNode }) {
     const pading = useBreakpointValue({ base: '0.5rem', md: '2rem', lg: '4rem' })
@@ -39,8 +37,10 @@ export function Background({ src, children }: { src: string, children?: React.Re
                 paddingBottom: '2rem',
                 display: 'flex',
                 justifyContent: 'center',
+                justifyItems: 'center',
                 flexDirection: 'column',
                 alignItems: 'center',
+                alignContent: 'center',
             }}
         >
             {children}
@@ -69,7 +69,7 @@ export function Fitures({ children }: { children: React.ReactNode }) {
 
 export function Section({ nazwa, children, img }: { nazwa: string, children?: React.ReactNode, img: string }) {
     return (
-        <div id={nazwa}>
+        <div style={{ paddingBottom: '2rem' }} id={nazwa}>
             <Background src={img}>
                 <Heading size="4xl">{nazwa}</Heading>
             </Background>

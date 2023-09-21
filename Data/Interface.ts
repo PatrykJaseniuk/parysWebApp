@@ -17,7 +17,7 @@ export interface SectionDane<T> {
 
 export interface HeaderDane {
     motto: string,
-    fitures: FitureDane[]
+    feature: FitureDane[]
 }
 
 export interface UslugiDane {
@@ -26,6 +26,7 @@ export interface UslugiDane {
 
 export interface ZajeciaIndywidualneDane {
     description: string,
+    cennik: CenaDane[],
     trenerzy: TrenerDane[]
 }
 
@@ -48,6 +49,7 @@ export interface ZajecieDane {
 }
 
 export interface CenaDane {
+    imgSrc?: string | undefined
     nazwa: string
     cena: string
     wlasciwosci: { icon: Icon, text: string }[]
@@ -69,7 +71,8 @@ export interface TrenerDane {
 export interface FitureDane {
     title: string,
     description: string,
-    icon: Icon
+    icon?: Icon,
+    imgSrc?: string
 }
 
 

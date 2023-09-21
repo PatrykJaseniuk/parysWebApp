@@ -31,19 +31,17 @@ export function StronaTytulowa({ data }: { data: HeaderDane }) {
     console.log('rendering')
     return (
         <div>
-            <Background src="https://prowly-uploads.s3.eu-west-1.amazonaws.com/uploads/landing_page/template_background/176364/1bc90a5a056322c9312ec81493701177.jpg"         >
+            <Background src="BieznieBlur.png"         >
                 <img className="w-60 lg:w-80" src="logo.png" />
             </Background >
             <UnderSection>
                 <Text style={{ fontSize: '2rem' }}>{data.motto}</Text>
 
                 <Fitures>
-                    {data.fitures.map((fiture, index) => {
+                    {data.feature.map((fiture, index) => {
                         return (
                             <SlideFade in={ticker[index]}>
-                                <Fiture
-                                    data={fiture}
-                                />
+                                <Fiture data={fiture} />
                             </SlideFade>
                         )
                     })}
@@ -63,7 +61,9 @@ function Fiture({ data }: { data: FitureDane }) {
     return (
         // flex in column
         <Flex style={{ flexDirection: 'column', gap: '1rem', alignItems: 'start', width: value?.width, marginBottom: '3rem' }}>
-            {data.icon({ style: { width: '6rem', height: '6rem', fill: 'black' } })}
+            {data.icon && data.icon({ style: { width: '6rem', height: '6rem', fill: 'black' } }) ||
+                data.imgSrc && <img src={data.imgSrc} style={{ width: '6rem', height: 'auto', borderRadius: '10%' }} />
+            }
             <Heading>{data.title}</Heading>
             <Text style={{ width: value?.textWidth, height: '4rem', textAlign: 'start' }}>{data.description}</Text>
         </Flex>
