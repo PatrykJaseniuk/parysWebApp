@@ -1,7 +1,7 @@
 # Cel
 Strona reklamowa siłowni Parys
 
-## Wymagane elmenty
+## Wymagane elementy
 
 * Strona tytułowa
 * Usługi i ceny usług

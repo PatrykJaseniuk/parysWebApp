@@ -8,7 +8,7 @@ import { useIntersectionObserver } from "usehooks-ts"
 export const ZajeciaIndywidualne = ({ data }: { data: SectionDane<ZajeciaIndywidualneDane> }) => {
     const refFiture = useRef<HTMLDivElement | null>(null)
     const refCard = useRef<HTMLDivElement | null>(null)
-    const entry = useIntersectionObserver(refFiture, { threshold: 1 });
+    const entry = useIntersectionObserver(refCard, { threshold: 0 });
     const [showCard, setShowCard] = useState(false)
     useOutsideClick({
         ref: refCard,
@@ -24,7 +24,6 @@ export const ZajeciaIndywidualne = ({ data }: { data: SectionDane<ZajeciaIndywid
         return {
             data: cenaDane,
             colorPackage: colorsPackages[index % colorsPackages.length],
-
         }
     })
 
@@ -50,8 +49,6 @@ export const ZajeciaIndywidualne = ({ data }: { data: SectionDane<ZajeciaIndywid
                 // gap: '2rem',
                 justifyContent: 'center',
             }}>
-
-
                 {data.zawartosc.trenerzy.map((trener, index) => <Trener
                     key={index}
                     data={trener}

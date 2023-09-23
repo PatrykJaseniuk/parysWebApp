@@ -72,7 +72,7 @@ const AppBarSmall = ({ elements }: { elements: string[] }) => {
                     marginTop: '0.5rem',
                     marginBottom: '0.5rem',
                 }} />
-                {elements.map(element => <a onClick={() => setIsMenuOpen(false)} href={'#' + element} ><Heading>{element}</Heading></a>)}
+                {elements.map((element, index) => <a key={index} onClick={() => setIsMenuOpen(false)} href={'#' + element} ><Heading>{element}</Heading></a>)}
 
 
             </div>
