@@ -6,6 +6,156 @@ import { IconShield } from "@/Icons/IconShield";
 import { IconMashine } from "@/Icons/IconMashine";
 import { IconArea } from "@/Icons/IconArea";
 import { IconCalaDoba } from "@/Icons/IconCalaDoba";
+import { type } from "os";
+
+interface Strefa {
+    nazwa: string;
+    opis: string;
+    media: {
+        type: 'video' | 'img';
+        src: string;
+    };
+    // icon?: any;
+}
+type Strefy = { [key in 'wolneCiezary' | 'maszynyZeStosem' | 'cardio' | 'rozgrzewka' | 'rollmasaz' | 'platformaWibrujaca' | 'cross']: Strefa };
+
+const strefy: Strefy = {
+    wolneCiezary: {
+        nazwa: 'Strefa wolnych ciężarów',
+        opis: "to jest opis funkcjonalnej strefy",
+        media: { type: "video", src: "wolneCiezary.mp4" },
+    },
+    maszynyZeStosem: {
+        nazwa: 'Strefa maszyn ze stosem',
+        opis: "to jest opis funkcjonalnej strefy",
+        media: { type: "img", src: "maszynyZeStosem.png" }
+    },
+    cardio: {
+        nazwa: 'Strefa cardio',
+        opis: "to jest opis funkcjonalnej strefy",
+        media: { type: "img", src: "cardio.png" }
+    },
+    rozgrzewka: {
+        nazwa: 'Strefa treningów funkcjonalnych',
+        opis: "to jest opis funkcjonalnej strefy",
+        media: { type: "img", src: "funkcjonalna.png" }
+    },
+    cross: {
+        nazwa: 'Strefa CROSS',
+        opis: "to jest opis funkcjonalnej strefy",
+        media: { type: "img", src: "cross.png" }
+    },
+    rollmasaz: {
+        nazwa: 'Strefa rollmasażu',
+        opis: "to jest opis funkcjonalnej strefy",
+        media: { type: "img", src: "rollmasaz.png" }
+    },
+    platformaWibrujaca: {
+        nazwa: 'Strefa platformy wibrującej',
+        opis: "to jest opis funkcjonalnej strefy",
+        media: { type: "img", src: "platformaWibrujaca.png" }
+    },
+}
+
+const zajeciaGrupowe = {
+    crosfit: {
+        nazwa: 'Crossfit',
+        opis: 'to sa zajecia crossfit',
+        media: { type: "img", src: "crossfit.png" },
+        icon: IconInfinity
+    }
+}
+
+
+const getCennik = (cenaBazowaUslugi: number) => ({
+    jednorazowy: {
+        cena: cenaBazowaUslugi,
+    },
+    okresowe: {
+        miesieczny: {
+            cena: cenaBazowaUslugi * 5,
+        },
+        dwutygodniowy: {
+            cena: cenaBazowaUslugi * 3,
+        },
+    },
+    wejsciowe: {
+        dziesiec: {
+            cena: cenaBazowaUslugi * 3,
+        },
+        osiem: {
+            cena: cenaBazowaUslugi * 2,
+        },
+    },
+    partnerzy: {
+        multisport: {
+            cena: cenaBazowaUslugi - 25,
+        },
+        medicover: {
+            cena: cenaBazowaUslugi - 25,
+        },
+        fitProfit: {
+            cena: cenaBazowaUslugi - 25,
+        },
+    }
+})
+
+const oferta = {
+    silownaiBasic: {
+        nazwa: 'Siłownia Basic',
+        opis: 'Podstawowa usługa w naszym ośrodku',
+        DostepneStrefy: [
+            strefy.wolneCiezary,
+            strefy.maszynyZeStosem,
+            strefy.cardio,
+            strefy.rozgrzewka
+        ],
+        ZajeciaGrupowe: true,
+        cennik: getCennik(25)
+    },
+    silowniaPremium: {
+        nazwa: 'Siłownia Premium',
+        opis: 'Podstawowa usługa w naszym ośrodku',
+        DostepneStrefy: [
+            strefy.wolneCiezary,
+            strefy.maszynyZeStosem,
+            strefy.cardio,
+            strefy.rozgrzewka,
+        ],
+        ZajeciaGrupowe: true,
+        cennik: getCennik(35)
+    },
+    badminton: {
+        nazwa: 'Badmintion',
+        opis: 'To jest opis badmintona',
+        cennik: { jednorazowy: { cena: 60 } }
+    },
+    sauna: {
+        nazwa: 'Sauna',
+        opis: 'To jest opis sauny',
+        cennik: { jednorazowy: { cena: 60 } }
+    },
+    bufet:{
+        nazwa: 'Bufet',
+        opis: 'To jest opis bufetu',
+        cennik: { }
+    },
+}
+
+const zajeciaIndywidualne = {
+    treningPersonalny: {
+        nazwa: 'Trening personalny',
+        opis: 'To jest opis treningu personalnego',
+        cennik: { jednorazowy: { cena: 110 } }
+    },
+    konsultacja: {
+        nazwa: 'Konsultacja',
+        opis: 'To jest opis konsultacji',
+        cennik: { jednorazowy: { cena: 110 } }
+    },
+}
+
+
 
 export const data: Site = {
     header: {
@@ -276,3 +426,4 @@ export const data: Site = {
         adress: 'Poniatowskiego 3 Nysa'
     },
 }
+
